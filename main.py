@@ -39,7 +39,7 @@ def rules():
         print("Try again.")
         rules()
 
-def play_loop():
+def loop():
     play_game = ""
     while play_game not in ["y", "n","Y","N"]:
         play_game = input("\nDo You want to play again? Y or N \n")
@@ -51,7 +51,7 @@ def play_loop():
       print("\nThanks For Playing! Come back another time!")
       sys.exit()
 
-def game(one: int, two: int, three: str) -> Optional[bool]:
+def logic(one: int, two: int, three: str) -> Optional[bool]:
     if one == two:
         if three == "jackpot":
             return None
