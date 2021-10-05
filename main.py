@@ -83,22 +83,22 @@ def main():
     else:
         print(f"\nInvalid choice {pick}.")
         time.sleep(1)
-        play_loop()
+        loop()
 
-    result = game(clue, num, choice)
+    result = logic(clue, num, choice)
 
     if result is True:
         print("\nYou won! Noice!")
         print(f"The number was {num}.")
-        play_loop()
+        loop()
     elif result is None:
         print("\nJackpot!")
         print(f"The number was {num}.")
-        play_loop()
+        loop()
     elif result is False:
         print("\nSorry, you lost")
         print(f"The number was {num}.")
-        play_loop()
+        loop()
     else:
         print("\nAn error has occured")
         print("Please forgive me and try again")
